@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="asistencias" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3e407b93-afc0-49f8-b136-36de3092ce1c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="fecha" class="java.lang.String"/>
+	<field name="puntual" class="java.lang.Long"/>
+	<field name="tardanza" class="java.lang.Long"/>
+	<field name="inasistencia" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="30" width="400" height="45" forecolor="#164E85" uuid="670d7860-5ace-4436-8c73-4a1fb48cff97"/>
+				<textElement textAlignment="Center">
+					<font size="29" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de asistencias]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="-26" width="560" height="50" forecolor="#164E85" backcolor="#FFFFFF" uuid="e095544e-cabf-42da-962c-c52b31ecea06"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="30" y="-10" width="100" height="20" forecolor="#164E85" uuid="9323be5e-dd69-4cfd-89e2-e1ba8bc90ae5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2f8d4ec-6a09-43b1-bb17-b9f0515581c4"/>
+				</reportElement>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="-10" width="100" height="20" forecolor="#164E85" uuid="1618e730-082a-46b7-8ef1-b9859adacf1d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="195278f9-3b1e-43ab-84e5-5be7cec04580"/>
+				</reportElement>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUNTUAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="-10" width="100" height="20" forecolor="#164E85" uuid="10e8bc00-9489-4223-a5ce-8b63ee222928">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7f722c12-afad-4fc2-a1a0-670206d34daf"/>
+				</reportElement>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TARDANZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="-10" width="100" height="20" forecolor="#164E85" uuid="64cd7993-9043-446b-b229-fa0713d6f251">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="56795845-3c05-4d0b-baf4-88f152449282"/>
+				</reportElement>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INASISTENCIA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="20" width="100" height="20" uuid="931ccbcf-b0de-4e07-a789-2e1485ce94e7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c2f8d4ec-6a09-43b1-bb17-b9f0515581c4"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="20" width="100" height="20" uuid="d57f0f01-266b-4315-9c86-4273c4f9a86a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="195278f9-3b1e-43ab-84e5-5be7cec04580"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{puntual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="20" width="100" height="20" uuid="8e95508b-9354-4b2f-9742-ff65820ea9df">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7f722c12-afad-4fc2-a1a0-670206d34daf"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tardanza}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="20" width="90" height="20" uuid="63f6478d-00f7-48a2-baae-729fca479809">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="56795845-3c05-4d0b-baf4-88f152449282"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inasistencia}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

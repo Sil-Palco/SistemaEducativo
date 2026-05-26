@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cursoReporte" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="16794a1d-4c3f-48af-90d9-71c7a3ab110f">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nombreCurso" class="java.lang.String"/>
+	<field name="aprobados" class="java.lang.Long"/>
+	<field name="desaprobados" class="java.lang.Long"/>
+	<field name="nombreAula" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="76" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="430" y="0" width="130" height="30" uuid="4c773bd4-9fd4-429d-9581-28a263935ee9"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="82" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="31" width="561" height="39" forecolor="#8FBDF2" backcolor="#8FBDF2" uuid="0e90c528-728f-4c33-9ab3-135cf90e4c5e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="434" y="31" width="110" height="39" uuid="c2878133-9b6b-42c2-8977-71573ef1de79">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ecf07e7-88c4-428a-a0c7-6a325cd80946"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desaprobados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="30" width="125" height="39" uuid="da676b37-6c6c-46e7-932f-162176a598bb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="535b74b3-4590-44e8-aa86-ad0de30a9238"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Aprobados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="31" width="100" height="39" uuid="195853db-43ae-4435-a156-1b94c549ec81">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8eb0420b-94f0-4f96-95a2-ec459b6cb1d8"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Curso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="-16" width="560" height="36" forecolor="#164E85" uuid="fbd6fcdc-7e6a-44c8-bc78-c661d7f03c8e"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE NOTAS POR CURSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="30" width="90" height="39" uuid="6d0825f0-8d3d-4127-852d-47bd5f4822b8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8eb0420b-94f0-4f96-95a2-ec459b6cb1d8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Aula]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="8" splitType="Stretch">
+			<staticText>
+				<reportElement x="27" y="0" width="100" height="8" uuid="030525e1-071c-40a8-b37e-59b58595de13">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89ad89d2-5aac-4d11-a4a8-198d5e9c0cdb"/>
+				</reportElement>
+				<text><![CDATA[nomreAula]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="140" y="0" width="100" height="30" uuid="6614a524-b1c7-4b9e-bcb5-6692414bd829">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8eb0420b-94f0-4f96-95a2-ec459b6cb1d8"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreCurso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="60" height="30" uuid="b12bc7a2-c7b4-4334-92a0-954eb6e5db90">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="535b74b3-4590-44e8-aa86-ad0de30a9238"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aprobados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="0" width="66" height="30" uuid="bfc2da4c-e1da-4598-80ee-805dd62dfbce">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ecf07e7-88c4-428a-a0c7-6a325cd80946"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desaprobados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="0" width="100" height="30" uuid="5d4e3bd0-5aab-4f0a-9477-9140cb78a77b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="89ad89d2-5aac-4d11-a4a8-198d5e9c0cdb"/>
+				</reportElement>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{nombreAula}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
